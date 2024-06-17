@@ -1,5 +1,9 @@
 # Manias - Limpio pantalla
 print ("\033[H\033[J")
+
+#****************************************************
+# ACA EMPIEZA EL MIO - THE BEST ! :)
+#****************************************************
 cant_piezas=int(0)
 cant_comp=int(0)
 CP=int(0) 
@@ -37,7 +41,8 @@ while CP != 00:
         while CC != 00:
             tope= 10000
             if Proc_valido(CC,tope) == True:
-                cod_pieza = CC // 100    
+                aux = CC // 100
+                cod_pieza = CC-(aux*100)
                 if CP==cod_pieza:
                     valido = True
                     cant_comp=cant_comp+1
