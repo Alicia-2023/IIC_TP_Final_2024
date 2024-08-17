@@ -8,7 +8,7 @@ cant_piezas=int(0)
 cant_comp=int(0)
 CP=int(0) 
 CC=int(0)
-min=0
+minimo=0
 tope=0
 codigo=int(0)
 PrC= float(0)
@@ -32,8 +32,8 @@ def Proc_valido(codigo,tope):
         return False
 #****************************************************
 
-def Proc_valido_precio(codigo,min,tope):
-    if codigo >= min:
+def Proc_valido_precio(codigo,minimo,tope):
+    if codigo >= minimo:
         if codigo < tope:
             return True
         else:
@@ -57,7 +57,6 @@ while CP != 00:
                 cod_pieza = CC-(aux*100)
                 if CP==cod_pieza:
                     valido = True
-#                    cant_comp=cant_comp+1
                 else:
                     CC=int(input("* ATENCION * El codigo no corresponde a esta pieza, vuelva a ingresarlo: "))
                     valido = False
